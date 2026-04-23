@@ -22,6 +22,7 @@ export default function Home() {
       <MetricsSection />
       <IntegrationsSection />
       <SecuritySection />
+      <PricingSection />
       <TestimonialsSection />
       <CtaSection />
       <FooterSection />

@@ -5,27 +5,33 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     step: "01",
-    title: "Discovery & Strategy",
+    title: "Identify",
     description:
-      "We analyze your business needs and define a clear roadmap aligned with your objectives.",
+      "Spot a real, structural problem in industry, services or daily life. Validate it with market research.",
   },
   {
     step: "02",
-    title: "Design & Architecture",
+    title: "Engineer",
     description:
-      "We design intuitive experiences and build scalable architectures tailored to your solution.",
+      "Design the full solution in-house hardware, firmware, software, UX. No outsourcing. Full ownership.",
   },
   {
     step: "03",
-    title: "Development & Integration",
+    title: "Build The POC",
     description:
-      "We develop robust systems and integrate them seamlessly into your existing environment.",
+      "Deliver a working proof of concept.Test. Iterate. Validate with real users.",
   },
   {
     step: "04",
-    title: "Deployment & Growth",
+    title: "Spin OFF",
     description:
-      "We launch, monitor, and continuously improve your product as your business evolves.",
+      "Launch the solution as an independent startup.H2A retains founding equity.A dedicated team is assembled.",
+  },
+  {
+    step: "05",
+    title: "Scale & Exit",
+    description:
+      "Grow the venture. Raise dedicated capital.Exit via sale or regional expansion.",
   },
 ];
 export function HowItWorksSection() {

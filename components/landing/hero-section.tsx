@@ -113,8 +113,8 @@ export function HeroSection() {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            We create tailor-made digital solutions to accelerate your
-            transformation.
+            A Deep Tech Startup Studio building the next generation of African
+            industrial ventures
           </p>
 
           {/* CTAs */}

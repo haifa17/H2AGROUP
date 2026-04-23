@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Impact", href: "#impact" },
   { name: "What we build", href: "#integrations" },
   { name: "Security", href: "#security" },
+  { name: "Vision & RoadMap", href: "#roadmap" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -36,7 +37,7 @@ export function Navigation() {
         className={`mx-auto transition-all duration-500 ${
           isScrolled || isMobileMenuOpen
             ? "bg-stone-800 text-white  backdrop-blur-xl border border-foreground/10 rounded-2xl shadow-lg max-w-[1200px]"
-            : "bg-transparent max-w-[1400px]"
+            : "bg-transparent  max-w-[1400px]"
         }`}
       >
         <div
@@ -71,7 +72,9 @@ export function Navigation() {
                 className={`text-sm transition-colors duration-300 relative group ${isScrolled ? "text-white hover:font-semibold" : "text-foreground/70 hover:text-foreground"}`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 block  left-0 w-0 h-px  ${isScrolled ? "bg-white" : "bg-foreground"} transition-all duration-300 group-hover:w-full`} />
+                <span
+                  className={`absolute -bottom-1 block  left-0 w-0 h-px  ${isScrolled ? "bg-white" : "bg-foreground"} transition-all duration-300 group-hover:w-full`}
+                />
               </Link>
             ))}
           </div>
