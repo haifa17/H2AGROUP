@@ -65,8 +65,8 @@ export function PricingSection() {
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight text-foreground mb-6">
             Our
             <br />
-            <span className="text-stroke">Mission </span> <br /> &{" "}
-            <span className="text-stroke">RoadMap </span>
+            <span className="text-blue-700">Mission </span> <br /> &{" "}
+            <span className="text-blue-700">RoadMap </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl">
             Build the tech solutions Africa's industry needs engineered by
@@ -81,7 +81,7 @@ export function PricingSection() {
               key={plan.name}
               className={`relative p-8 lg:p-12 bg-background ${
                 plan.popular
-                  ? "md:-my-4 md:py-12 lg:py-16 border-2 border-foreground"
+                  ? "md:-my-4 md:py-12 lg:py-16 border-2 border-blue-700 shadow-lg"
                   : ""
               }`}
             >

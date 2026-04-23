@@ -26,7 +26,7 @@ const contactLinks = [
     icon: <MapIcon size={16} />,
   },
   { name: "contact@h2a-group.com", icon: <Mail size={16} /> },
-  { name: "+21692626949 | +21699832138", icon: <Phone size={16} /> },
+  { name: "+216 92626949 | +216 99832138", icon: <Phone size={16} /> },
 ];
 const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/h2a-group-tn/" },
@@ -56,10 +56,8 @@ export function FooterSection() {
               </Link>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
-                H2A accompanies businesses in their technological transformation
-                through advanced solutions in web and mobile development,
-                robotics, embedded systems, IoT and artificial
-                intelligence.{" "}
+                Hardware to Application .<br />A Deep Tech Startup Studio
+                building the next generation of African industrial ventures.
               </p>
             </div>
 
