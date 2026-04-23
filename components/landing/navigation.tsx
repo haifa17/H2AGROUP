@@ -81,7 +81,7 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/contact" passHref>
+            <Link href="#contact" passHref>
               <Button
                 size="sm"
                 className={`bg-blue-700 cursor-pointer hover:bg-foreground/90 text-background rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
@@ -98,7 +98,7 @@ export function Navigation() {
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6 text-black" />
             ) : (
               <Menu className="w-6 h-6" />
             )}
@@ -123,7 +123,7 @@ export function Navigation() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-5xl font-display text-foreground hover:text-muted-foreground transition-all duration-500 ${
+                className={`text-2xl font-display text-foreground hover:text-muted-foreground transition-all duration-500 ${
                   isMobileMenuOpen
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-4"
@@ -146,19 +146,14 @@ export function Navigation() {
             }`}
             style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}
           >
-            <Button
-              variant="outline"
-              className="flex-1 rounded-full h-14 text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Sign in
-            </Button>
-            <Button
-              className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Start creating
-            </Button>
+            <Link href="#contact" passHref>
+              <Button
+                size="sm"
+                className={`bg-blue-700 cursor-pointer hover:bg-foreground/90 text-background rounded-full w-52 transition-all duration-500 rounded-full h-14`}
+              >
+                Contact
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
