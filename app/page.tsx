@@ -11,21 +11,24 @@ import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { PricingSection } from "@/components/landing/vision-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { FooterSection } from "@/components/landing/footer-section";
+import { SmoothScroll } from "@/components/smooth-scroll";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-x-hidden noise-overlay">
-      <Navigation />
-      <HeroSection />
-      <FeaturesSection />
-      <HowItWorksSection />
-      {/* <MetricsSection /> */}
-      <IntegrationsSection />
-      <SecuritySection />
-      <PricingSection />
-      {/* <TestimonialsSection /> */}
-      <CtaSection />
-      <FooterSection />
+      <SmoothScroll>
+        <Navigation />
+        <HeroSection />
+        <FeaturesSection />
+        <HowItWorksSection />
+        {/* <MetricsSection /> */}
+        <IntegrationsSection />
+        <SecuritySection />
+        <PricingSection />
+        {/* <TestimonialsSection /> */}
+        <CtaSection />
+        <FooterSection />
+      </SmoothScroll>
     </main>
   );
 }
