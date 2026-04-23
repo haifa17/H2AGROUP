@@ -137,7 +137,7 @@ export function HowItWorksSection() {
                 Step {steps[activeStep].step}
               </div>
 
-              <div className="text-2xl font-semibold mb-4">
+              <div className="text-2xl text-black font-semibold mb-4">
                 {steps[activeStep].title}
               </div>
 

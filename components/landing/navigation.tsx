@@ -8,7 +8,7 @@ import Link from "next/link";
 const navLinks = [
   { name: "Features", href: "#features" },
   { name: "How we work", href: "#how-it-works" },
-  { name: "Impact", href: "#impact" },
+  // { name: "Impact", href: "#impact" },
   { name: "What we build", href: "#integrations" },
   { name: "Security", href: "#security" },
   { name: "Vision & RoadMap", href: "#roadmap" },
@@ -46,22 +46,18 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
-          {isScrolled ? (
-            <img src="/logo.svg" alt="Logo" className="h-32 w-32 mt-8" />
-          ) : (
-            <Link href="#" className="flex items-center gap-2 group">
+          <Link href="#" className="flex items-center gap-2 group">
               <span
                 className={`font-display tracking-tight transition-all duration-500 ${isScrolled ? "text-xl" : "text-2xl"}`}
               >
                 H2A{" "}
               </span>
               <span
-                className={`text-muted-foreground font-mono transition-all duration-500 ${isScrolled ? "text-[10px] mt-0.5" : "text-xs mt-1"}`}
+                className={` font-mono transition-all duration-500 ${isScrolled ? "text-[10px] mt-0.5 text-white" : "text-xs mt-1 text-muted-foreground"}`}
               >
                 Group
               </span>
             </Link>
-          )}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">

@@ -19,11 +19,11 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <HowItWorksSection />
-      <MetricsSection />
+      {/* <MetricsSection /> */}
       <IntegrationsSection />
       <SecuritySection />
       <PricingSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CtaSection />
       <FooterSection />
     </main>
