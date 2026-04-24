@@ -26,6 +26,7 @@ export default function Home() {
         <SecuritySection />
         <PricingSection />
         {/* <TestimonialsSection /> */}
+        <DevelopersSection />
         <CtaSection />
         <FooterSection />
       </SmoothScroll>
