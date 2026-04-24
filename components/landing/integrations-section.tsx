@@ -1,20 +1,26 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
+import { Button } from "../ui/button";
 
-const integrations = [
-  { name: "Web Development", category: "Platforms & Applications" },
-  { name: "Mobile Apps", category: "iOS & Android Solutions" },
-  { name: "Artificial Intelligence", category: "Smart Systems" },
-  { name: "IoT Solutions", category: "Connected Devices" },
-  { name: "Robotics", category: "Automation & Innovation" },
-  { name: "UI/UX Design", category: "User Experience" },
-  { name: "Cloud & DevOps", category: "Infrastructure" },
-  { name: "Custom Software", category: "Enterprise Solutions" },
-  { name: "System Integration", category: "Connected Ecosystems" },
-  { name: "Data & Analytics", category: "Insights & Optimization" },
-  { name: "Cybersecurity", category: "Secure Architecture" },
-  { name: "Consulting", category: "Strategy & Innovation" },
+export const integrations = [
+  { name: "Embedded Systems", category: "Hardware Engineering" },
+  { name: "TinyML & Edge AI", category: "Edge Intelligence" },
+  { name: "IoT Architecture", category: "System Architecture" },
+  { name: "IoT Solutions", category: "Connected Systems" },
+  { name: "BLE & LoRa", category: "Wireless Communication" },
+  { name: "STM32 & ESP32", category: "Microcontroller Platforms" },
+  { name: "PCB Design", category: "Electronic Design" },
+  { name: "Computer Vision", category: "AI & Perception" },
+  { name: "MQTT & Cloud", category: "Cloud & Messaging" },
+  { name: "Predictive AI", category: "AI & Analytics" },
+  { name: "Web Platforms", category: "Digital Platforms" },
+  { name: "Mobile Apps", category: "Mobile Development" },
+  { name: "Real-time Data", category: "Data Engineering" },
+  { name: "Matching Algorithms", category: "Algorithm Design" },
+  { name: "SaaS Products", category: "Product Engineering" },
+  { name: "UX Engineering", category: "User Experience" },
 ];
 
 export function IntegrationsSection() {
@@ -48,22 +54,108 @@ export function IntegrationsSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30 " />
-            What We Build
+            WHAT WE BUILD
             <span className="w-8 h-px bg-foreground/30" />
           </span>
           <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-6">
-            <span className="text-blue-700 ">Technology</span> built around
+            Two<span className="text-blue-700 "> verticals</span>
             <br />
-            your <span className="text-blue-700 ">business</span>.
+            One <span className="text-blue-700 ">engineering </span>DNA.
           </h2>
           <p className="text-xl text-muted-foreground">
-            We design and develop digital solutions that solve real
-            problems—from web platforms to AI-powered systems.
+            We engineer ventures across two complementary domains — industrial
+            intelligence and smart digital platforms. Every product we build is
+            internally owned, technically validated, and designed for African
+            markets
           </p>
         </div>
       </div>
+      <div className="max-w-[1400px] grid grid-cols-2 w-full  gap-10  mx-auto px-6 lg:px-12 mb-16">
+        <div className="border border-foreground/10 p-8  bg-white">
+          <div className="text-sm font-mono text-muted-foreground mb-4">
+            VERTICAL 1 —
+          </div>
 
-      {/* Full-width marquees outside container */}
+          <div className="text-2xl text-black font-semibold mb-4">
+            INDUSTRIAL IoT & EMBEDDED AI
+          </div>
+
+          <div className="text-muted-foreground leading-relaxed">
+            Connected devices and intelligent systems designed for factories,
+            warehouses and industrial environments.
+            <ul>
+              <li>• Predictive systems and anomaly detection</li>
+              <li>• Real-time asset and fleet tracking</li>
+              <li>• Energy monitoring and optimization</li>
+              <li>• Computer vision on embedded hardware</li>
+              <li>• Edge AI and TinyML solutions</li>
+            </ul>
+          </div>
+        </div>
+        <div className="border border-foreground/10 p-8  bg-white">
+          <div className="text-sm font-mono text-muted-foreground mb-4">
+            VERTICAL 2 —
+          </div>
+
+          <div className="text-2xl text-black font-semibold mb-4">
+            SMART DIGITAL PLATFORMS
+          </div>
+
+          <div className="text-muted-foreground leading-relaxed">
+            Intelligent web and mobile platforms targeting underserved markets
+            across North Africa and beyond.
+            <ul>
+              <li>• AI-powered matching and ranking platforms</li>
+              <li>• Digital marketplace solutions</li>
+              <li>• SaaS tools for service industries</li>
+              <li>• Real-time data dashboards</li>
+              <li>• Mobile-first user experiences</li>
+            </ul>
+          </div>
+        </div>
+        <div className="border border-foreground/10 p-8 bg-white col-span-2 max-w-2xl mx-auto">
+          <div className="text-2xl text-blue-700 font-semibold mb-4">
+            CUSTOM TECH SERVICES
+          </div>
+          <div className="grid grid-cols-2 gap-10 ">
+            <div className="text-muted-foreground leading-relaxed  mb-4">
+              <p className="mb-10">
+                Beyond our internal ventures, we take on selected client
+                projects in embedded systems, IoT, web and mobile development.
+                We bring the same engineering rigor to your project as we do to
+                our own.
+              </p>
+              <Link href="#contact" passHref>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-blue-700 w-52 hover:bg-blue-800 text-background hover:text-white px-8 h-14 text-sm rounded-full group cursor-pointer"
+                >
+                  Request a <br /> Custom Project →
+                </Button>
+              </Link>
+            </div>
+
+            <div className="text-muted-foreground leading-relaxed border-l border-foreground/10 pl-10">
+              <p className="mb-10">
+                Our internal ventures are currently in POC phase.
+               Details remain confidential, but we are open to pilot
+                collaborations with selected industrial and digital partners
+              </p>
+              <Link href="#contact" passHref  >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-blue-700 hover:bg-blue-800  text-background hover:text-white px-8 h-14 text-sm rounded-full group cursor-pointer"
+                >
+                  Discuss a Pilot →
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      ${/* Full-width marquees outside container */}
       <div className="w-full mb-6">
         <div className="flex gap-6 marquee">
           {[...Array(2)].map((_, setIndex) => (
@@ -85,7 +177,6 @@ export function IntegrationsSection() {
           ))}
         </div>
       </div>
-
       {/* Reverse marquee */}
       <div className="w-full">
         <div className="flex gap-6 marquee-reverse">
