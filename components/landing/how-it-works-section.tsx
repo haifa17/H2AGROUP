@@ -5,33 +5,33 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     step: "01",
-    title: "Identify",
+    title: "IDENTIFY",
     description:
-      "Spot a real, structural problem in industry, services or daily life. Validate it with market research.",
+      "We spot real, structural problems in industry, services or everyday life. We validate them through field research before writing a single line of code. No assumptions. Only evidence.",
   },
   {
     step: "02",
-    title: "Engineer",
+    title: "ENGINEER",
     description:
-      "Design the full solution in-house hardware, firmware, software, UX. No outsourcing. Full ownership.",
+      "We design the complete solution in-house: hardware, firmware, software and UX. No outsourcing. No subcontracting. Full technical ownership from day one",
   },
   {
     step: "03",
-    title: "Build The POC",
+    title: "BUILD THE POC",
     description:
-      "Deliver a working proof of concept.Test. Iterate. Validate with real users.",
+      "We deliver a working proof of concept. We test it in real environments, iterate fast, and validate with actual users before any market exposure. Fail cheap. Learn fast. Build right.",
   },
   {
     step: "04",
-    title: "Spin OFF",
+    title: "SPIN OFF",
     description:
-      "Launch the solution as an independent startup.H2A retains founding equity.A dedicated team is assembled.",
+      "The validated product becomes an independent startup entity. H2A retains founding equity. A dedicated team is assembled around the venture. The product leaves the studio — but never H2A's portfolio.",
   },
   {
     step: "05",
-    title: "Scale & Exit",
+    title: "SCALE & EXIT",
     description:
-      "Grow the venture. Raise dedicated capital.Exit via sale or regional expansion.",
+      "The venture raises its own investment round. It scales across Tunisia and the African continent. H2A exits via equity sale and reinvests into the next build. One exit fuels the next venture.",
   },
 ];
 export function HowItWorksSection() {
@@ -85,7 +85,7 @@ export function HowItWorksSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-muted-foreground" />
-            How We Work
+            HOW WE BUILD
           </span>
           <h2
             className={`text-4xl text-black lg:text-6xl font-display tracking-tight transition-all duration-700 ${
@@ -96,11 +96,12 @@ export function HowItWorksSection() {
           >
             How we turn ideas
             <br />
-            <span className="text-blue-700"> into scalable solutions.</span>
+            <span className="text-blue-700"> into <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">independent</span> companies.</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-            A structured approach that ensures every project is delivered
-            efficiently, from concept to scalable digital solution.
+            A battle-tested engineering process that takes a raw idea from zero <br />
+            to a market-ready venture — fully owned, fully engineered, fully
+            African.
           </p>
         </div>
 
@@ -155,6 +156,7 @@ export function HowItWorksSection() {
             </div>
           </div>
         </div>
+       <p className="text-xl text-muted-foreground leading-relaxed mt-10 ">Every venture starts inside <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">H2A</span>. Every venture is built to <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">outlive</span> it.</p>
       </div>
 
       <style jsx>{`
