@@ -26,7 +26,7 @@ export function FeaturesSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Features
+            OUR EDGE
           </span>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
@@ -35,10 +35,18 @@ export function FeaturesSection() {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            Building what your business needs.
+            We don't build for others.
             <br />
             <span className="text-blue-700">
-              Nothing generic. Everything tailored.
+              We build for{" "}
+              <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
+                Africa
+              </span>{" "}
+              <br />
+            </span>
+            and we own everything we{" "}
+            <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
+              create
             </span>
           </h2>
         </div>

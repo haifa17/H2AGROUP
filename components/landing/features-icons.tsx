@@ -1,55 +1,55 @@
-"use client"
+"use client";
 import { useEffect, useRef, useState } from "react";
 
 export const features = [
   {
     number: "01",
-    title: "Custom Digital Solutions",
+    title: "FULL-STACK ENGINEERING OWNERSHIP",
     description:
-      "We design and build tailored web, mobile, and enterprise applications that align perfectly with your business goals.",
+      "From PCB design to cloud dashboard, every layer is engineered in-house. No outsourcing. No dependencies. Total control over every venture we build.",
     visual: "deploy",
   },
   {
     number: "02",
-    title: "AI & Emerging Technologies",
+    title: "AI & IOT AT THE CORE",
     description:
-      "Leverage AI, IoT, and advanced technologies to create smarter systems, automate processes, and unlock new opportunities.",
+      "Every venture we build integrates intelligence from day one: TinyML on embedded devices,real-time data pipelines, and AI-powered decision layers.",
     visual: "ai",
   },
-   {
+  {
     number: "03",
-    title: "Embedded Systems Engineering",
+    title: " HARDWARE MEETS SOFTWARE",
     description:
-      "We design efficient low-level hardware and firmware solutions optimized for performance, reliability, and real-time constraints in embedded environments.",
+      "We are one of the few studios in Africa that masters both embedded hardware and digital platforms simultaneously. From microcontroller to mobile app, we build the full product.",
     visual: "embedded",
   },
   {
     number: "04",
-    title: "Intelligent Robotics Systems",
+    title: "POC-FIRST METHODOLOGY",
     description:
-      "We build autonomous and semi-autonomous robotic systems integrating sensors, control algorithms, and AI for real-world interaction and decision-making.",
+      "We validate before we scale. Every venture starts as a working prototype, tested in real environments before any market exposure. Zero assumptions. Real results.",
     visual: "robotics",
   },
   {
     number: "05",
-    title: "IoT Connectivity & Platforms",
+    title: "BUILT FOR AFRICAN REALITY",
     description:
-      "We develop scalable IoT ecosystems that connect devices, collect real-time data, and enable intelligent monitoring and remote control.",
-    visual: "iot",
+      "Our solutions are engineered for the constraints, budgets and needs of African industry and markets — not adapted from global products that were never built for here.",
+    visual: "africa",
   },
   {
     number: "06",
-    title: "End-to-End Product Development",
+    title: "STUDIO MODEL = COMPOUNDED VALUE",
     description:
-      "From concept to deployment, we handle the full lifecycle—strategy, design, development, and scaling.",
+      "Each venture we build strengthens the next. Shared infrastructure. Shared expertise. Shared ambition. One studio. Unlimited ventures.",
     visual: "collab",
   },
   {
     number: "07",
-    title: "Scalable & Secure Architecture",
+    title: "SMART DIGITAL PLATFORMS",
     description:
-      "We build robust, high-performance systems with security and scalability at the core, ready to grow with your business.",
-    visual: "security",
+      "Beyond hardware, we design and build intelligent web and mobile platforms targeting underserved digital markets. Engineered with the same rigor as our industrial solutions.",
+    visual: "platform",
   },
 ];
 export function DeployVisual() {
@@ -659,9 +659,118 @@ export function AnimatedVisual({ type }: { type: string }) {
       return <RoboticsVisual />;
     case "iot":
       return <IoTVisual />;
+    case "africa":
+      return <AfricaVisual />;
+    case "platform":
+      return <PlatformVisual />;
     default:
       return <DeployVisual />;
   }
+}
+export function AfricaVisual() {
+  return (
+    <svg viewBox="0 0 200 160" className="w-full h-full">
+      {/* Central node */}
+      <circle cx="100" cy="80" r="10" fill="currentColor" />
+
+      {/* Uneven surrounding nodes (symbolizing constraints/adaptation) */}
+      {[
+        { x: 40, y: 50 },
+        { x: 160, y: 60 },
+        { x: 60, y: 130 },
+        { x: 140, y: 120 },
+      ].map((p, i) => (
+        <g key={i}>
+          <circle cx={p.x} cy={p.y} r="6" fill="currentColor" opacity="0.6" />
+          <line
+            x1="100"
+            y1="80"
+            x2={p.x}
+            y2={p.y}
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeDasharray="3 3"
+          />
+        </g>
+      ))}
+
+      {/* Pulse showing adaptability */}
+      <circle
+        cx="100"
+        cy="80"
+        r="20"
+        fill="none"
+        stroke="currentColor"
+        opacity="0.3"
+      >
+        <animate
+          attributeName="r"
+          values="20;50;20"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+      </circle>
+    </svg>
+  );
+}
+export function PlatformVisual() {
+  return (
+    <svg viewBox="0 0 200 160" className="w-full h-full">
+      {/* Browser window */}
+      <rect
+        x="40"
+        y="30"
+        width="120"
+        height="90"
+        rx="6"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+
+      {/* Top bar */}
+      <line
+        x1="40"
+        y1="50"
+        x2="160"
+        y2="50"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+
+      {/* UI blocks */}
+      {[0, 1, 2].map((i) => (
+        <rect
+          key={i}
+          x="55"
+          y={60 + i * 20}
+          width="90"
+          height="10"
+          rx="2"
+          fill="currentColor"
+          opacity="0.2"
+        >
+          <animate
+            attributeName="opacity"
+            values="0.2;0.6;0.2"
+            dur="2s"
+            begin={`${i * 0.3}s`}
+            repeatCount="indefinite"
+          />
+        </rect>
+      ))}
+
+      {/* Cursor dot */}
+      <circle cx="140" cy="100" r="3" fill="currentColor">
+        <animate
+          attributeName="r"
+          values="3;5;3"
+          dur="1s"
+          repeatCount="indefinite"
+        />
+      </circle>
+    </svg>
+  );
 }
 
 export function FeatureCard({
