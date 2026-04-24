@@ -3,96 +3,42 @@
 import { useState, useEffect, useRef } from "react";
 import { Copy, Check } from "lucide-react";
 
-const codeExamples = [
+const team = [
   {
-    label: "Install",
-    code: `npm install @optimus/sdk
-
-# or
-yarn add @optimus/sdk
-pnpm add @optimus/sdk`,
+    name: "HAYTHEM KHIARI",
+    role: "Co-Founder & CEO",
+    desc: "Embedded Systems Engineer ",
+    image: "/team/haythem.png",
   },
   {
-    label: "Initialize",
-    code: `import { Optimus } from '@optimus/sdk'
-
-const optimus = new Optimus({
-  apiKey: process.env.OPTIMUS_KEY
-})`,
+    name: "AHMED KHOCHTALI",
+    role: "Co-Founder & CTO Hardware",
+    desc: "IoT Systems Engineer ",
+    image: "/team/ahmed.png",
   },
   {
-    label: "Deploy",
-    code: `const app = await optimus.deploy({
-  name: 'my-app',
-  region: 'auto',
-  scaling: {
-    min: 1,
-    max: 100
-  }
-})
-
-console.log('Live at:', app.url)`,
-  },
-];
-
-const features = [
-  {
-    title: "TypeScript native",
-    description: "Full type safety with auto-generated types.",
+    name: "ATID GHEZAIEL",
+    role: "Co-Founder & CTO Software",
+    desc: "Industrial Electronics Engineer ",
+    image: "/team/atid.png",
   },
   {
-    title: "Zero config",
-    description: "Sensible defaults that just work.",
+    name: "HAIFA KHIARI",
+    role: "Full Stack Developer",
+    desc: "Software Engineer",
+    image: "/team/haifa.png",
   },
   {
-    title: "Edge-ready",
-    description: "Runs anywhere: Node, Deno, Bun, browsers.",
-  },
-  {
-    title: "12KB gzipped",
-    description: "Lightweight with zero dependencies.",
+    name: "RAYEN HAMDI",
+    role: "AI Engineer",
+    desc: "Software Engineer",
+    image: "/team/rayen.png",
   },
 ];
-
-const codeAnimationStyles = `
-  .dev-code-line {
-    opacity: 0;
-    transform: translateX(-8px);
-    animation: devLineReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-  
-  @keyframes devLineReveal {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .dev-code-char {
-    opacity: 0;
-    filter: blur(8px);
-    animation: devCharReveal 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-  
-  @keyframes devCharReveal {
-    to {
-      opacity: 1;
-      filter: blur(0);
-    }
-  }
-`;
 
 export function DevelopersSection() {
-  const [activeTab, setActiveTab] = useState(0);
-  const [copied, setCopied] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(codeExamples[activeTab].code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -108,11 +54,10 @@ export function DevelopersSection() {
 
   return (
     <section
-      id="developers"
+      id="team"
       ref={sectionRef}
       className="relative py-24 lg:py-32 overflow-hidden"
     >
-      <style dangerouslySetInnerHTML={{ __html: codeAnimationStyles }} />
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className=" gap-16 lg:gap-24 items-start">
           {/* Left: Content */}
@@ -142,28 +87,55 @@ export function DevelopersSection() {
               the belief that Africa's tech gap can be closed from within.
             </p>
 
-            {/* Features */}
-            <div className="grid grid-cols-2 gap-6">
-              {features.map((feature, index) => (
+            {/* Member Profiles */}
+            {/* First row (3 members) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+              {team.slice(0, 3).map((member, index) => (
                 <div
-                  key={feature.title}
-                  className={`transition-all duration-500 ${
-                    isVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-4"
-                  }`}
-                  style={{ transitionDelay: `${index * 50 + 200}ms` }}
+                  key={index}
+                  className="group border border-foreground/10 bg-white p-6 hover:shadow-lg transition-all duration-300"
                 >
-                  <h3 className="font-medium mb-1">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {feature.description}
+                  <div className="w-full h-84 mb-4 overflow-hidden bg-gray-100">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+
+                  <h3 className="text-lg font-semibold">{member.name}</h3>
+                  <p className="text-sm text-muted-foreground">{member.role}</p>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    {member.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Second row (centered 2 members) */}
+            <div className="flex justify-center gap-6 flex-wrap">
+              {team.slice(3).map((member, index) => (
+                <div
+                  key={index}
+                  className="w-full sm:w-[400px] group border border-foreground/10 bg-white p-6 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="w-full h-84 mb-4 overflow-hidden bg-gray-100">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+
+                  <h3 className="text-lg font-semibold">{member.name}</h3>
+                  <p className="text-sm text-muted-foreground">{member.role}</p>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    {member.desc}
                   </p>
                 </div>
               ))}
             </div>
           </div>
-
-      
         </div>
       </div>
     </section>

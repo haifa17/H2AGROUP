@@ -12,6 +12,7 @@ const navLinks = [
   { name: "What we build", href: "#integrations" },
   { name: "Security", href: "#security" },
   { name: "Vision & RoadMap", href: "#roadmap" },
+  { name: "Team", href: "#team" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -47,17 +48,17 @@ export function Navigation() {
         >
           {/* Logo */}
           <Link href="#" className="flex items-center gap-2 group">
-              <span
-                className={`font-display tracking-tight transition-all duration-500 ${isScrolled ? "text-xl" : "text-2xl"}`}
-              >
-                H2A{" "}
-              </span>
-              <span
-                className={` font-mono transition-all duration-500 ${isScrolled ? "text-[10px] mt-0.5 text-white" : "text-xs mt-1 text-muted-foreground"}`}
-              >
-                Group
-              </span>
-            </Link>
+            <span
+              className={`font-display tracking-tight transition-all duration-500 ${isScrolled ? "text-xl" : "text-2xl"}`}
+            >
+              H2A{" "}
+            </span>
+            <span
+              className={` font-mono transition-all duration-500 ${isScrolled ? "text-[10px] mt-0.5 text-white" : "text-xs mt-1 text-muted-foreground"}`}
+            >
+              Group
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
