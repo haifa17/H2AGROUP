@@ -76,7 +76,9 @@ export function CtaSection() {
       .then(
         () => {
           console.log("Email sent");
-          toast.success("Your message has been sent! We'll get back to you soon.");
+          toast.success(
+            "Your message has been sent! We'll get back to you soon.",
+          );
           setOpen(false);
         },
         (error) => {
@@ -181,7 +183,11 @@ export function CtaSection() {
           <DialogContent className="sm:max-w-lg">
             <DialogHeader>
               <DialogTitle className="text-2xl font-display">
-                Start your project
+                Let's build together.
+              </DialogTitle>
+              <DialogTitle className="text-sm text-muted-foreground mt-2">
+                Fill out the form below and we'll get back to you within 48
+                hours.
               </DialogTitle>
             </DialogHeader>
 
