@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Instrument_Sans, Instrument_Serif, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+  import { ToastContainer} from 'react-toastify';
 
 const instrumentSans = Instrument_Sans({ 
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         {children}
         <Analytics />
+        <ToastContainer />
       </body>
     </html>
   )

@@ -98,7 +98,7 @@ export function HowItWorksSection() {
             <br />
             <span className="text-blue-700"> into <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">independent</span> companies.</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-12">
+          <p className="text-xl text-muted-foreground leading-relaxed mb-12 mt-5">
             A battle-tested engineering process that takes a raw idea from zero <br />
             to a market-ready venture — fully owned, fully engineered, fully
             African.

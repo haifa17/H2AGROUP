@@ -81,9 +81,9 @@ export function HeroSection() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="block">Your partner</span>
+          
             <span className="block">
-              to{" "}
+              We{" "}
               <span className="relative inline-block">
                 <span key={wordIndex} className="inline-flex">
                   {words[wordIndex].split("").map((char, i) => (

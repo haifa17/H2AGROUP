@@ -124,7 +124,7 @@ export function PricingSection() {
             </div>
           ))}
         </div>
-        <p className="text-xl text-muted-foreground text-center leading-relaxed mt-20 ">
+        <p className="text-xl italic text-muted-foreground text-center leading-relaxed mt-20 ">
           "Africa's <span className="text-blue-700">industrial revolution</span> won't come from abroad. It will be
           engineered  <span className="text-blue-700">from within</span>."
         </p>
