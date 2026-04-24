@@ -70,7 +70,7 @@ export function IntegrationsSection() {
           </p>
         </div>
       </div>
-      <div className="max-w-[1400px] grid grid-cols-2 w-full  gap-10  mx-auto px-6 lg:px-12 mb-16">
+      <div className="lg:max-w-[1400px] grid grid-cols-1 lg:grid-cols-2 w-full  gap-10  mx-auto px-6 lg:px-12 mb-16">
         <div className="border border-foreground/10 p-8  bg-white">
           <div className="text-sm font-mono text-muted-foreground mb-4">
             VERTICAL 1 —
@@ -113,11 +113,11 @@ export function IntegrationsSection() {
             </ul>
           </div>
         </div>
-        <div className="border border-foreground/10 p-8 bg-white col-span-2 max-w-2xl mx-auto">
+        <div className="border border-foreground/10 p-8 bg-white lg:col-span-2 max-w-2xl mx-auto">
           <div className="text-2xl text-blue-700 font-semibold mb-4">
             CUSTOM TECH SERVICES
           </div>
-          <div className="grid grid-cols-2 gap-10 ">
+          <div className="grid lg:grid-cols-2 gap-10 ">
             <div className="text-muted-foreground leading-relaxed  mb-4">
               <p className="mb-10">
                 Beyond our internal ventures, we take on selected client
@@ -136,7 +136,7 @@ export function IntegrationsSection() {
               </Link>
             </div>
 
-            <div className="text-muted-foreground leading-relaxed border-l border-foreground/10 pl-10">
+            <div className="text-muted-foreground leading-relaxed lg:border-l border-foreground/10 lg:pl-10">
               <p className="mb-10">
                 Our internal ventures are currently in POC phase.
                Details remain confidential, but we are open to pilot
@@ -155,7 +155,7 @@ export function IntegrationsSection() {
           </div>
         </div>
       </div>
-      ${/* Full-width marquees outside container */}
+      {/* Full-width marquees outside container */}
       <div className="w-full mb-6">
         <div className="flex gap-6 marquee">
           {[...Array(2)].map((_, setIndex) => (
