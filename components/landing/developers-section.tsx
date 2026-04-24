@@ -12,13 +12,13 @@ const team = [
   },
   {
     name: "AHMED KHOCHTALI",
-    role: "Co-Founder & CTO Hardware",
+    role: "Co-Founder & CPO ",
     desc: "IoT Systems Engineer ",
     image: "/team/ahmed.png",
   },
   {
     name: "ATID GHEZAIEL",
-    role: "Co-Founder & CTO Software",
+    role: "Co-Founder & CTO",
     desc: "Industrial Electronics Engineer ",
     image: "/team/atid.png",
   },
