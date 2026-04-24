@@ -60,7 +60,7 @@ export function PricingSection() {
           </span>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight text-foreground mb-6">
             From
-            <span className="text-blue-700"> Sousse </span> <br /> to the
+            <span className="text-blue-700"> Tunisia </span> <br /> to the
             <span className="text-blue-700"> Continent </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
