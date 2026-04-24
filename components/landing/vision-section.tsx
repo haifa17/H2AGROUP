@@ -6,51 +6,47 @@ import { ArrowRight, Check } from "lucide-react";
 const plans = [
   {
     name: "2025 ",
-    description: "Studio founded",
-    features: ["First 7 ventures initiated ","POC development phasebegins."],
-    cta: "Start free",
+    description: "STUDIO BORN",
+    features: [
+      "Multiple ventures initiated across IoT, AI and digital platforms",
+      "POC development phasebegins.",
+      " Full engineering stack assembled in-house",
+    ],
     popular: false,
   },
   {
     name: "2026",
-    description: "First POCs validated",
-    price: { monthly: 29, annual: 24 },
+    description: "VALIDATE",
     features: [
-      " First POCs validated",
+      "First POCs tested in real environments",
       "First B2B pilot partnerships secured",
-      "Pre - seed fundraising round ",
+      "Pre-seed fundraising round opened",
     ],
-    cta: "Start trial",
     popular: true,
   },
   {
     name: "2027",
-    description: "First spin-off ",
-    price: { monthly: null, annual: null },
+    description: "LAUNCH",
     features: [
       "First spin-off launched independently",
       "Regional expansion: Algeria ,Morocco",
       "Studio team scaled to 10+ engineers",
     ],
-    cta: "Contact sales",
     popular: false,
   },
   {
     name: "2028",
-    description: "3 active ventures on the market,",
-    price: { monthly: null, annual: null },
+    description: "SCALE",
     features: [
-      " 3 active ventures on the market",
+      "3+ active ventures on the market",
       "H2A recognized as Tunisia's leading deep tech venture builder",
+      "New markets: Sub-Saharan Africa",
     ],
-    cta: "Contact sales",
     popular: false,
   },
 ];
 
 export function PricingSection() {
-  const [isAnnual, setIsAnnual] = useState(true);
-
   return (
     <section
       id="roadmap"
@@ -60,17 +56,19 @@ export function PricingSection() {
         {/* Header */}
         <div className="max-w-3xl mb-20">
           <span className="font-mono text-xs tracking-widest text-muted-foreground  block mb-6">
-            Vision & RoadMap
+            VISION & ROADMAP
           </span>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight text-foreground mb-6">
-            Our
-            <br />
-            <span className="text-blue-700">Mission </span> <br /> &{" "}
-            <span className="text-blue-700">RoadMap </span>
+            From
+            <span className="text-blue-700"> Sousse </span> <br /> to the
+            <span className="text-blue-700"> Continent </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl">
-            Build the tech solutions Africa's industry needs engineered by
-            African talent , for African realities, at global standards.
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            Our mission is to become Africa's leading deep tech venture builder
+            — creating industrial and digital products that are affordable,
+            engineering-grade, and built for the realities of our market. We
+            don't import solutions. <br />
+            We engineer them from the inside out.
           </p>
         </div>
 
@@ -85,8 +83,6 @@ export function PricingSection() {
                   : ""
               }`}
             >
-             
-
               {/* Plan Header */}
               <div className="mb-8">
                 <span className="font-mono text-xs text-muted-foreground">
@@ -95,7 +91,7 @@ export function PricingSection() {
                 <h3 className="font-display text-3xl text-foreground mt-2">
                   {plan.name}
                 </h3>
-                <p className="text-sm text-muted-foreground mt-2">
+                <p className="text-sm bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent mt-2">
                   {plan.description}
                 </p>
               </div>
@@ -125,14 +121,13 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
-
-              {/* CTA */}
-              
             </div>
           ))}
         </div>
-
-       
+        <p className="text-xl text-muted-foreground text-center leading-relaxed mt-20 ">
+          "Africa's <span className="text-blue-700">industrial revolution</span> won't come from abroad. It will be
+          engineered  <span className="text-blue-700">from within</span>."
+        </p>
       </div>
     </section>
   );
