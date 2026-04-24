@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Settings } from "lucide-react";
+import { ArrowRight, Mail, Settings } from "lucide-react";
 import { AnimatedSphere } from "./animated-sphere";
 import Link from "next/link";
 
-const words = ["create", "build", "scale", "ship"];
+const words = ["ship", "create", "build", "scale"];
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,9 +65,9 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground">
             <span className="w-8 h-px bg-foreground/30" />
-            Welcome to{" "}
+            Hardware to
             <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
-              H2A
+              Application
             </span>
           </span>
         </div>
@@ -113,7 +113,10 @@ export function HeroSection() {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            A Deep Tech Startup Studio building the next generation of African
+            A Deep Tech Startup Studio building the next generation of{" "}
+            <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
+              African
+            </span>{" "}
             industrial ventures
           </p>
 
@@ -128,19 +131,22 @@ export function HeroSection() {
             <Link href="#contact" passHref>
               <Button
                 size="lg"
+                variant="outline"
                 className="bg-blue-700 hover:bg-blue-800 w-52 text-background px-8 h-14 text-base rounded-full group cursor-pointer"
               >
-                Contact Us
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                Partner With Us →
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-14 px-8 text-base rounded-full border-foreground/20 bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent  cursor-pointer"
-            >
-              Discover Our Services <Settings className="text-purple-700" />
-            </Button>
+            <Link href="#contact" passHref>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-14 px-8 text-base rounded-full bg-white text-blue-700  cursor-pointer"
+              >
+                Contact Us
+                <Mail className="text-blue-700" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -156,24 +162,24 @@ export function HeroSection() {
             <div key={i} className="flex gap-16">
               {[
                 {
-                  value: "2-4 weeks",
-                  label: "to deliver MVPs",
-                  company: "H2A projects",
+                  value: "7+",
+                  label: "Ventures",
+                  company: "being engineered right now",
                 },
                 {
-                  value: "90%",
-                  label: "client-specific solutions",
-                  company: "Tailor-made builds",
-                },
-                {
-                  value: "3x",
-                  label: "faster development cycles",
-                  company: "Digital products",
+                  value: "5+",
+                  label: "Engineers",
+                  company: "Zero compromises.",
                 },
                 {
                   value: "100%",
-                  label: "custom tech stacks",
-                  company: "AI • IoT • Web",
+                  label: "In-house",
+                  company: "From chip to cloud.",
+                },
+                {
+                  value: "2025",
+                  label: "The year Africa's tech studio",
+                  company: "was born",
                 },
               ].map((stat) => (
                 <div
