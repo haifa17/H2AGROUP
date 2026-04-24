@@ -95,7 +95,7 @@ export function DevelopersSection() {
                   key={index}
                   className="group border border-foreground/10 bg-white p-6 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-full h-84 mb-4 overflow-hidden bg-gray-100">
+                  <div className="w-full h-80 mb-4 overflow-hidden bg-gray-100">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -119,7 +119,7 @@ export function DevelopersSection() {
                   key={index}
                   className="w-full sm:w-[400px] group border border-foreground/10 bg-white p-6 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-full h-84 mb-4 overflow-hidden bg-gray-100">
+                  <div className="w-full h-80 mb-4 overflow-hidden bg-gray-100">
                     <img
                       src={member.image}
                       alt={member.name}
